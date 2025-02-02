@@ -1,5 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import "./MainNav.css";
+import home from "../../assets/img/home.png";
+import notification from "../../assets/img/notification.png";
+import myPage from "../../assets/img/myPage.png"
 
 const MainNav = () => {
   const nav = useNavigate();
@@ -9,7 +12,7 @@ const MainNav = () => {
       <div className="nav-item" onClick={() => nav("/notification")}>
         <div className="icon-container">
           <img
-            src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/nav-alarmBell.png"
+            src={notification}
             alt="Notification"
             className="icon"
           />
@@ -19,7 +22,7 @@ const MainNav = () => {
       <div className="nav-item" onClick={() => nav("/home")}>
         <div className="icon-container">
           <img
-            src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/nav-home.png"
+            src={home}
             alt="Home"
             className="icon"
           />
@@ -29,7 +32,7 @@ const MainNav = () => {
       <div className="nav-item" onClick={() => nav("/mypage")}>
         <div className="icon-container">
           <img
-            src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/nav-mypage.png"
+            src={myPage}
             alt="MyPage"
             className="icon"
           />

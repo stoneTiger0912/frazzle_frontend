@@ -5,7 +5,7 @@
 }
 
 .category-image-friend {
-  background-image: url("https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/friend01.png");
+  background-image: url("../../assets/img/friend01.png");
   background-size: cover;
   border-radius: 100%;
   width: 68%;
@@ -17,7 +17,7 @@
 }
 
 .category-image-family {
-  background-image: url("https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/family01.png");
+  background-image: url("../../assets/img/family01.png");
   background-size: cover;
   border-radius: 100%;
   width: 68%;
@@ -28,7 +28,7 @@
 }
 
 .category-image-lover {
-  background-image: url("https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/lover01.png");
+  background-image: url("../../assets/img/lover01.png");
   background-size: cover;
   border-radius: 100%;
   width: 68%;
@@ -39,7 +39,7 @@
 }
 
 .category-image-pet {
-  background-image: url("https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/pet01.png");
+  background-image: url("../../assets/img/pet01.png");
   background-size: cover;
   border-radius: 100%;
   width: 68%;

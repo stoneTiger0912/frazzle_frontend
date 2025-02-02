@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./KakaoLoginButton.css";
+import kakao_logo from "../../assets/img/kakao-logo.png"
 
 const KakaoLoginButton = () => {
 
@@ -12,7 +13,7 @@ const KakaoLoginButton = () => {
 
   return (
     <div className="kakao-button flex align-items-center" onClick={ loginWithKakao }>
-      <img src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/kakao-logo.png" alt="kakao-logo" />
+      <img src={ kakao_logo} alt="kakao-logo" />
       <span>카카오톡으로 로그인</span>
     </div>
   );

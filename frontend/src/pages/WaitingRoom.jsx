@@ -11,6 +11,7 @@ import "./WaitingRoom.css";
 import { setGameUser, setGameInfo } from "../stores/waitingRoomSlice";
 import { cropImageToSquare } from "../utils/cropImage";
 import LoadingModal from "./LoadingModal";
+import edit_image from "../assets/img/edit-image.png"
 
 const WaitingRoom = () => {
   const [inputMessage, setInputMessage] = useState("");
@@ -221,7 +222,7 @@ const WaitingRoom = () => {
           onClick={() => setShowGameImg(!showGameImg)}
         >
           <img
-            src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/edit-image-photo.png"
+            src={edit_image}
             alt="show-img"
           />
         </div>

@@ -6,6 +6,9 @@ import directoryApi from "../../../apis/directoryApi";
 
 import InvitedMember from "./InvitedMember";
 import { setMemberList } from "../../../stores/directorySlice";
+import invite_member from "../../../assets/img/invite-member.png"
+import x_symbol from "../../../assets/img/x-symbol.png";
+import profile_default from "../../../assets/img/profile-default.png"
 
 const InviteDirectory = () => {
   const dispatch = useDispatch();
@@ -82,13 +85,13 @@ const InviteDirectory = () => {
     <div className="invite-directory-modal flex flex-wrap">
       <div className="invite-directory-modal-header flex">
         <img
-          src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/invite-member.png"
+          src={invite_member}
           alt="folder-icon"
           className="folder-icon"
         />
         <span className="create-directory-modal-title">디렉토리 멤버 초대</span>
         <img
-          src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/x-symbol.png"
+          src={x_symbol}
           alt="x-symbol"
           className="x-symbol"
           onClick={() => dispatch(setModalId(0))}
@@ -124,7 +127,7 @@ const InviteDirectory = () => {
                       </div>
                     <img
                       style={{ width: "6px", height: "6px", marginLeft: "2.5vw" }}
-                      src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/x-symbol.png"
+                        src={x_symbol}
                       alt=""
                       onClick={() => setInviteMember({})}
                     />
@@ -164,7 +167,7 @@ const InviteDirectory = () => {
                   style={{
                     backgroundImage: user.profileUrl
                       ? `url(${user.profileUrl})`
-                      : `url('https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/profile-default.png')`,
+                      : `url(${profile_default})`
                   }}
                 ></div>
                 <div className="user-details">

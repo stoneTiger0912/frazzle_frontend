@@ -15,6 +15,7 @@ import PuzzleCanvas from "../components/puzzleBoard/PuzzleCanvas";
 import { setBoardId } from "../stores/waitingRoomSlice";
 import MainNav from "../components/common/MainNav";
 import { setGameLevel } from "../stores/waitingRoomSlice";
+import trash from "../assets/img/trash.png"
 
 const UncompletedBoard = ({ boardID }) => {
   // 모달 창
@@ -126,7 +127,7 @@ const UncompletedBoard = ({ boardID }) => {
           icon={
             !board.vote && (
               <img
-                src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/trash.png"
+                src={trash}
                 alt="thirdIcon"
                 className="header-icon"
                 style={{ width: "40%", marginLeft: "7vw" }}

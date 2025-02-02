@@ -4,6 +4,7 @@ import userApi from "../../apis/userApi";
 import { useSelector, useDispatch } from "react-redux";
 import { setProfileImg } from "../../stores/userSlice";
 import compressImage from "../../utils/compressImg";
+import camera_logo from "../../assets/img/camera-logo.png";
 
 const ProfileCircle = () => {
   const user = useSelector((state) => state.user);
@@ -55,7 +56,7 @@ const ProfileCircle = () => {
         {profileSrc ? "" : "동그라미"}
       </div>
       <img
-        src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/camera-logo.png"
+        src={ camera_logo}
         alt="camera-logo"
         onClick={handleClick}
         className="profile-icon"

@@ -46,7 +46,7 @@ const Home = () => {
         <div className="top-title flex">
           <span>HOME</span>
           <div className="width-fix"></div>
-          <img
+          {/* <img
             src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/info-guide.png"
             alt="info-icon"
             className="info-icon"
@@ -55,7 +55,7 @@ const Home = () => {
               e.stopPropagation();
               setInfoModal(true);
             }}
-          />
+          /> */}
         </div>
         {/* <div className="user-info">
           안녕하세요

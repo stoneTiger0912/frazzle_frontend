@@ -6,6 +6,8 @@ import chekcWordLength from "../../../utils/stringConfig/checkWordLength";
 import directoryApi from "../../../apis/directoryApi";
 import { useNavigate } from "react-router-dom";
 import ExceptionMessage from "../../common/ExceptionMessage";
+import x_symbol from "../../../assets/img/x-symbol.png";
+import folder from "../../../assets/img/folder.png";
 
 const CreateDirectory = (props) => {
 
@@ -94,12 +96,12 @@ const CreateDirectory = (props) => {
     <div className="create-directory-modal flex flex-wrap">
       <div className="create-directory-modal-header flex"> {/* 1. 20% */}
         <img
-          src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/folder.png"
+          src={folder}
           alt="folder-icon"
           className="folder-icon"
         />
         <span className="create-directory-modal-title">디렉토리 만들기</span>
-        <img src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/x-symbol.png" alt="x-symbol" className="x-symbol" onClick={() => {
+        <img src={x_symbol} alt="x-symbol" className="x-symbol" onClick={() => {
           props.setModal(false);
         }} />
       </div>

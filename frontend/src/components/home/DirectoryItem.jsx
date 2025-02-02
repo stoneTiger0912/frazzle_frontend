@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./DirectoryItem.css";
 import makeHomeDirNameShort from "../../utils/makeHomeDirNameShort";
+import directory_folder from "../../assets/img/directory-folder.png"
 
 const DirectoryItem = (props) => {
   let navigate = useNavigate();
@@ -14,7 +15,7 @@ const DirectoryItem = (props) => {
     >
       <div className="directory-icon">
         <img
-          src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/directory-folder.png"
+          src={directory_folder}
           alt="directory-icon"
         ></img>
       </div>

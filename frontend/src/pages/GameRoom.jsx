@@ -14,7 +14,11 @@ import gameOpenViduApi from "../apis/gameOpenViduApi";
 import GameRoomMemberComponent from "../components/gameTalk/GameRoomMemberComponent";
 import AudioDeviceSelector from "../components/gameTalk/AudioDeviceSelector";
 import LoadingModal from "./LoadingModal";
-
+import voice_talk from "../assets/img/voice-talk.png"
+import voice from "../assets/img/voice.png"
+import voice_off from "../assets/img/voice-off.png"
+import chat from "../assets/img/chat.png"
+import picture from "../assets/img/picture.png"
 const GameRoom = () => {
   const { roomID } = useParams();
   const user = useSelector((state) => state.user);
@@ -389,7 +393,7 @@ const GameRoom = () => {
       <div className="game-room-footer">
         <div className="game-room-footer-button">
           <img
-            src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/voice-talk.png"
+            src={voice_talk}
             alt="show-img"
             onClick={handleJoinClick}
           />
@@ -398,8 +402,8 @@ const GameRoom = () => {
           <img
             src={
               isUnMuted
-                ? "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/voice.png"
-                : "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/voice-off.png"
+                ? {voice}
+                : {voice_off}
             }
             alt="show-img"
             onClick={toggleMute}
@@ -407,14 +411,14 @@ const GameRoom = () => {
         </div>
         <div className="game-room-footer-button">
           <img
-            src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/chat.png"
+            src={chat}
             alt="game-chat"
             onClick={showWindowChat}
           />
         </div>
         <div className="game-room-footer-button">
           <img
-            src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/img-white.png"
+            src={picture}
             alt="show-img"
             onClick={showWindowImg}
           />

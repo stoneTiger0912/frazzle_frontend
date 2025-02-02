@@ -9,7 +9,10 @@ import { useNavigate } from "react-router-dom";
 import DirectoryCanvasCopy from "../components/directory/DirectoryCanvasCopy";
 import PhotoFrameModalFrame from "./modalFrame/PhotoFrameModalFrame";
 import BoardDeleteModalFrame from "./../pages/modalFrame/BoardDeleteModalFrame";
-
+import trash from "../assets/img/trash.png"
+import thumbnail from "../assets/img/thumbnail.png"
+import four_cut from "../assets/img/four-cut.png"
+import album from "../assets/img/album.png"
 const CompletedBoard = ({ boardID }) => {
 
   let directoryId = useSelector(state => state.createBoard.directoryId);
@@ -112,7 +115,7 @@ const CompletedBoard = ({ boardID }) => {
           icon={
             !voteStatus ?
             <img
-              src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/trash.png"
+              src={trash}
               alt="trashIcon"
               className="header-icon"
               style={{ width: "40%", marginLeft: "7vw" }}
@@ -149,21 +152,21 @@ const CompletedBoard = ({ boardID }) => {
                 setThumbnailModal(true);
               }}>
                 <span style={{whiteSpace: 'nowrap'}}>썸네일</span>
-                <img src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/thumbnail-color.gif" />
+                <img src={thumbnail} />
               </div> : null}
             <div className="completed-board-body-bottom-icon-container" onClick={(e) => {
               e.stopPropagation();
               navigate(`/photo-frame/${boardID}`);
             }}>
               <span style={{whiteSpace: 'nowrap'}}>네컷사진</span>
-              <img src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/four-cut-color.gif" />
+              <img src={four_cut} />
             </div>
             <div className="completed-board-body-bottom-icon-container" onClick={(e) => {
               e.stopPropagation();
               navigate(`/album/${boardID}`);
             }}>
               <span style={{whiteSpace: 'nowrap'}}>앨범</span>
-              <img src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/album-color.gif" />
+              <img src={album} />
             </div>
           </div>
           <div className="completed-board-body-bottom-canvas-container">

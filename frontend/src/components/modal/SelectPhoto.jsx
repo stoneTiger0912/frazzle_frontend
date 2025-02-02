@@ -1,6 +1,8 @@
 import "./SelectPhoto.css";
 import { useEffect, useState } from "react";
 import boardApi from "./../../apis/boardApi";
+import x_symbol from "../../assets/img/x-symbol.png"
+import edit_image from "../../assets/img/edit-image.png"
 
 const SelectPhoto = ({
   id,
@@ -69,13 +71,13 @@ const SelectPhoto = ({
     <div className="select-photo-modal flex flex-wrap">
       <div className="select-photo-modal-header">
         <img
-          src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/edit-image-photo.png"
+          src={edit_image}
           alt="edit-icon"
           className="select-photo-edit-icon"
         />
         <span className="select-photo-title">사진 선택</span>
         <img
-          src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/x-symbol.png"
+          src={x_symbol}
           alt="x-symbol"
           className="x-symbol"
           onClick={() => {

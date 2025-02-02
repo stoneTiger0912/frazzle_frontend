@@ -1,24 +1,26 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
 import "./MainSwipe.css";
-
+import MainPage_pet from "../../assets/img/pet02.png";
+import MainPage_family from "../../assets/img/family02.png";
+import MainPage_lover from "../../assets/img/lover02.png";
+import MainPage_friend from "../../assets/img/friend02.png";
 const MainSwipe = () => {
   const images = [
     {
-      src: "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/MainPage-pet.png",
+      src: MainPage_pet,
       caption: "with Pet",
     },
     {
-      src: "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/MainPage-family.png",
+      src: MainPage_family,
       caption: "with Family",
     },
     {
-      src: "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/MainPage-couple.png",
+      src: MainPage_lover,
       caption: "lovers",
     },
     {
-      src: "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/MainPage-friend.png",
+      src: MainPage_friend,
       caption: "with Friends",
     },
   ];

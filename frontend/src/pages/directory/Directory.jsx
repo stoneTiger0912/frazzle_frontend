@@ -16,6 +16,8 @@ import { setDirectoryId } from "../../stores/createBoardSlice";
 import { setDirectoryName } from "../../stores/directorySlice";
 import DirectoryModalFrame from "../modalFrame/DirectoryModalFrame";
 import { setMemberList } from "../../stores/directorySlice";
+import edit from "../../assets/img/edit.png"
+import plus from "../../assets/img/plus.png"
 
 const Directory = () => {
   // url Parameter 이름과 동일하게 'id'를 사용해야 한다.
@@ -97,7 +99,7 @@ const Directory = () => {
           title={directory.directoryName}
           icon={
             <img
-              src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/edit.png"
+              src={edit}
               alt="thirdIcon"
               className="header-icon"
               style={{ width: "32%", marginLeft: "7vw" }}
@@ -120,7 +122,7 @@ const Directory = () => {
           >
             <span className="board-plus">퍼즐 추가</span>
             <img
-              src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/plus.png"
+              src={edit}
               alt="board-plus"
               className="board-plus-logo"
             />

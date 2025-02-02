@@ -1,4 +1,5 @@
 import "./KeywordPill.css";
+import x_symbol from "../../assets/img/x-symbol.png";
 
 const KeywordPill = (props) => {
   return (
@@ -12,7 +13,7 @@ const KeywordPill = (props) => {
     }}>
       <span id="keyword-pill-content">#{props.info}</span>
       <div className="x-icon-container">
-        <img src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/x-symbol.png" alt="x-icon" />
+        <img src={x_symbol} alt="x-icon" />
       </div>
     </div>
   )

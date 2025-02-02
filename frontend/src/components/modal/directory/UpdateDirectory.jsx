@@ -7,6 +7,8 @@ import checkAvailableWord from "../../../utils/stringConfig/checkAvailableWord";
 import chekcWordLength from "../../../utils/stringConfig/checkWordLength";
 import directoryApi from "../../../apis/directoryApi";
 import { useParams } from "react-router-dom";
+import x_symbol from "../../../assets/img/x-symbol.png";
+import edit from "../../../assets/img/edit.png"
 
 const UpdateDirectory = () => {
   const dispatch = useDispatch();
@@ -42,13 +44,13 @@ const UpdateDirectory = () => {
     <div className="update-directory-modal flex flex-wrap">
       <div className="update-directory-modal-header flex">
         <img
-          src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/edit.png"
+          src={edit}
           alt="folder-icon"
           className="folder-icon"
         />
         <span className="create-directory-modal-title">디렉토리 이름 수정</span>
         <img
-          src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/x-symbol.png"
+          src={x_symbol}
           alt="x-symbol"
           className="x-symbol"
           onClick={() => dispatch(setModalId(0))}

@@ -6,6 +6,8 @@ import { useSelector, useDispatch } from "react-redux";
 import compressImage from "../../../utils/compressImg";
 import ImgExceptionMessage from "../../common/ImgExceptionMessage";
 import { setImgLoading } from "../../../stores/loadingSlice";
+import x_symbol from "../../../assets/img/x-symbol.png";
+import edit_image from "../../../assets/img/edit-image.png"
 
 const ChooseImg = () => {
   const piece = useSelector((state) => state.piece);
@@ -96,7 +98,7 @@ const ChooseImg = () => {
     <div className="create-board-modal">
       <div className="create-board-modal-header flex">
         <img
-          src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/x-symbol.png"
+          src={x_symbol}
           alt="x-symbol"
           className="x-symbol"
           onClick={() => dispatch(setPieceId(0))}
@@ -116,7 +118,7 @@ const ChooseImg = () => {
             <div className="choose-img-container">
               <img
                 className="choose-img"
-                src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/edit-image-photo.png"
+                src={edit_image}
                 alt="edit-image-photo"
               />
               <span>Upload Photos</span>

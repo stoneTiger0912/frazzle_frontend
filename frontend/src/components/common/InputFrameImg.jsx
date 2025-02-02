@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./InputFrameImg.css";
+import edit_image from "../../assets/img/edit-image.png"
 
 const InputFrameImg = ({ imageUrls, isIconVisible, setSlotNum }) => {
   // 슬롯을 클릭할 때 아이콘을 숨기고, 슬롯 번호를 설정하는 함수
@@ -18,7 +19,7 @@ const InputFrameImg = ({ imageUrls, isIconVisible, setSlotNum }) => {
               margin: "auto",
               padding: "69px 0 69px 5px",
             }}
-            src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/edit-image-photo.png"
+            src={edit_image}
             alt="icon"
           />
         )}
@@ -34,7 +35,7 @@ const InputFrameImg = ({ imageUrls, isIconVisible, setSlotNum }) => {
               margin: "auto",
               padding: "69px 0 69px 5px",
             }}
-            src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/edit-image-photo.png"
+            src={edit_image}
             alt="icon"
           />
         )}
@@ -50,7 +51,7 @@ const InputFrameImg = ({ imageUrls, isIconVisible, setSlotNum }) => {
               margin: "auto",
               padding: "69px 0 69px 5px",
             }}
-            src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/edit-image-photo.png"
+            src={edit_image}
             alt="icon"
           />
         )}
@@ -66,7 +67,7 @@ const InputFrameImg = ({ imageUrls, isIconVisible, setSlotNum }) => {
               margin: "auto",
               padding: "69px 0 69px 5px",
             }}
-            src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/edit-image-photo.png"
+            src={edit_image}
             alt="icon"
           />
         )}

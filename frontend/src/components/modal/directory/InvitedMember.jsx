@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import directoryApi from "../../../apis/directoryApi";
 import { setMemberList } from "../../../stores/directorySlice";
+import profile_default from "../../../assets/img/profile-default.png"
 
 const InvitedMember = ({ member }) => {
   const createBoard = useSelector((state) => state.createBoard);
@@ -40,7 +41,7 @@ const InvitedMember = ({ member }) => {
         style={{
           backgroundImage: member.profileUrl
             ? `url(${member.profileUrl})`
-            : `url('https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/profile-default.png')`,
+            : `url(${profile_default})`,
         }}
       ></div>
 

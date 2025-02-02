@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Mission.css";
 import { useDispatch } from "react-redux";
 import { setGptLoading } from "../../stores/loadingSlice";
+import reload from "../../assets/img/reload.png"
 
 const Mission = ({ info, postGuides, keywordList, prevMissions, directoryId, setMissions, missions, setPrevMissions, reloadActive, setCanReload, canReload }) => {
 
@@ -11,7 +12,7 @@ const Mission = ({ info, postGuides, keywordList, prevMissions, directoryId, set
     <div className="mission flex">
       <span>{info}</span>
       {
-        reloadActive ? <img src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/reload-icon.png" alt="reload-icon" onClick={(e) => {
+        reloadActive ? <img src={reload} alt="reload-icon" onClick={(e) => {
           // 1. 이벤트 버블링 방지
           e.stopPropagation();
           // 2. num 인자를 1로 고정한 axios POST 요청 (Cannot use keyword 'await' outside an async function)

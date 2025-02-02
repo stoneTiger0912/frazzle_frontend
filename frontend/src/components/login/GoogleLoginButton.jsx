@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./GoogleLoginButton.css";
+import google_logo from "../../assets/img/google-logo.png"
 
 const GoogleLoginButton = () => {
 
@@ -17,7 +18,7 @@ const GoogleLoginButton = () => {
 
   return (
     <div className="google-button flex align-items-center" onClick={ loginWithGoogle }>
-      <img src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/google-logo.png" alt="google-logo" />
+      <img src={google_logo} alt="google-logo" />
       <span>구글로 로그인</span>
     </div>
   );

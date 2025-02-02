@@ -5,6 +5,7 @@ import GoogleLoginButton from "../../components/login/GoogleLoginButton";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import logo from "../../assets/img/frazzle-puzzle.png";
 
 const Login = () => {
   const user = useSelector((state) => state.user);
@@ -20,7 +21,7 @@ const Login = () => {
     <div className="w-full h-full">
       <div className="main-content">
         <img
-          src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/frazzle-puzzle.png"
+          src={logo}
           alt="frazzle-puzzle"
         />
         <span className="oneline">

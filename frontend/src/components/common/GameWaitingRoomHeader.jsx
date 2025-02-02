@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Profile from "./Profile";
 import "./GameWaitingRoomHeader.css";
 import makeNickNameShort from "../../utils/makeNickNameShort";
+import king from "../../assets/img/king.png"
 
 const GameWaitingRoomHeader = ({ robyKing, robyUserList }) => {
   return (
@@ -10,7 +11,7 @@ const GameWaitingRoomHeader = ({ robyKing, robyUserList }) => {
         <div className="game-profile-container">
           <img
             className="king-icon"
-            src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/king.png"
+            src={king}
             alt="king"
           />
           <div

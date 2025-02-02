@@ -7,16 +7,24 @@ import PhotoFrameModalFrame from "./modalFrame/PhotoFrameModalFrame";
 import { useParams } from "react-router-dom";
 import html2canvas from "html2canvas-pro";
 import LoadingModal from "./LoadingModal";
+import download from "../assets/img/download.png"
+import frame_black from "../assets/img/frame-black.png";
+import frame_white_black from "../assets/img/frame-white-black.png";
+import frame_white_purple from "../assets/img/frame-white-purple.png";
+import frame_purple from "../assets/img/frame-purple.png";
+import frame_pink from "../assets/img/frame-pink.png";
+import frame_hotpink from "../assets/img/frame-hotpink.png";
+import rectangle from "../assets/img/rectangle.png"
 
 const PhotoFrame = () => {
   const [selectFrame, setSelectFrame] = useState(0);
   const { boardID } = useParams();
 
   const [imgUrls, setImgUrls] = useState([
-    "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/Rectangle+6019.png",
-    "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/Rectangle+6019.png",
-    "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/Rectangle+6019.png",
-    "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/Rectangle+6019.png",
+    {rectangle},
+    {rectangle},
+    {rectangle},
+    {rectangle},
   ]);
 
   const [slotNum, setSlotNum] = useState(0);
@@ -78,7 +86,7 @@ const PhotoFrame = () => {
           title={"PhotoFrame"}
           icon={
             <img
-              src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/download.png"
+              src={download}
               alt="thirdIcon"
               className="header-icon"
               style={{ width: "38%", marginLeft: "7vw" }}
@@ -112,28 +120,28 @@ const PhotoFrame = () => {
 
 const frames = [
   {
-    src: "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/%ED%94%84%EB%A0%88%EC%A6%90+%ED%94%84%EB%A0%88%EC%9E%841.png",
+    src: {frame_black},
     type: "black",
   },
   {
-    src: "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/%ED%94%84%EB%A0%88%EC%A6%90+%ED%94%84%EB%A0%88%EC%9E%842.png",
+    src: {frame_white_black},
     type: "white-black",
   },
   {
-    src: "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/%ED%94%84%EB%A0%88%EC%A6%90+%ED%94%84%EB%A0%88%EC%9E%843.png",
+    src: {frame_white_purple},
     type: "white-purple",
   },
   {
-    src: "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/%ED%94%84%EB%A0%88%EC%A6%90+%ED%94%84%EB%A0%88%EC%9E%844.png",
+    src: {frame_purple},
     type: "purple",
   },
   {
-    src: "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/%ED%94%84%EB%A0%88%EC%A6%90+%ED%94%84%EB%A0%88%EC%9E%845.png",
-    type: "pick",
+    src: {frame_pink},
+    type: "pink",
   },
   {
-    src: "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/%ED%94%84%EB%A0%88%EC%A6%90+%ED%94%84%EB%A0%88%EC%9E%846.png",
-    type: "hot-pick",
+    src: {frame_hotpink},
+    type: "hot-pink",
   },
 ];
 

@@ -1,10 +1,11 @@
 import "./Profile.css";
 import React, { useRef, useState, useEffect } from "react";
 import makeNickNameShort from "../../utils/makeNickNameShort";
+import profile_default from "../../assets/img/profile-default.png"
 
 const Profile = ({ imgUrl, userName }) => {
   const [profileImgUrl, setProfileImgUrl] = useState(
-    "https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/profile-default.png"
+    profile_default
   );
   const [profileName, setProfileName] = useState(true);
 

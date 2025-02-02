@@ -6,6 +6,8 @@ import { setModalId } from "../../stores/directorySlice";
 import { useDispatch } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 import directoryApi from "../../apis/directoryApi";
+import invite_member from "../../assets/img/invite-member.png"
+import exit from "../../assets/img/exit.png"
 
 // 3요소: 해당 페이지 이름, 해당 페이지 카테고리, 아이콘 (없을 수도 있음)
 const MemberHeader = ({ memberList, id }) => {
@@ -42,7 +44,7 @@ const MemberHeader = ({ memberList, id }) => {
     <div className="member-header flex">
       <div className="member-header-left" onClick={openInviteModal}>
         <img
-          src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/invite-member.png"
+          src={invite_member}
           alt="invite-member"
           className="member-header-left-logo"
         />
@@ -83,7 +85,7 @@ const MemberHeader = ({ memberList, id }) => {
 
       <div className="member-header-right" onClick={openLeaveModal}>
         <img
-          src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/exit.png"
+          src={exit}
           alt="exit-directory"
           className="member-header-right-logo"
         />

@@ -8,6 +8,7 @@ import {
   setdirectoryName,
 } from "../../../stores/waitingRoomSlice";
 import { setModalBoardId } from "../../../stores/boardSlice";
+import x_symbol from "../../../assets/img/x-symbol.png";
 
 const EnterWaitingRoom = () => {
   const waitingRoom = useSelector((state) => state.waitingRoom);
@@ -35,7 +36,7 @@ const EnterWaitingRoom = () => {
       <div className="enter-waiting-modal">
         <div className="enter-waiting-modal-header flex">
           <img
-            src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/x-symbol.png"
+            src={x_symbol}
             alt="x-symbol"
             className="x-symbol"
             onClick={() => dispatch(setModalBoardId(0))}

@@ -4,6 +4,8 @@ import MainNav from "../components/common/MainNav";
 import NotificationApi from "../apis/NotificationApi";
 import NotificationList from "../components/notification/NotificationList";
 import "./Notification.css";
+import notification from "../assets/img/notification.png"
+import notification_empty from "../assets/img/notification-empty.png"
 
 import { useEffect, useState } from "react";
 
@@ -32,7 +34,7 @@ const Notification = () => {
           title="Notification"
           icon={
             <img
-              src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/notification-alarm-bell.png"
+              src={notification}
               alt="thirdIcon"
               className="icon-header"
               style={{ width: "38%", marginLeft: "7vw" }}
@@ -45,7 +47,7 @@ const Notification = () => {
         {alarmData.length === 0 ? (
           <div className="alarm-empty-space">
             <img
-              src="https://frazzle208.s3.ap-northeast-2.amazonaws.com/img/notification-empty.png"
+              src={notification_empty}
               alt="empty"
               className="alarm-empty-icon"
             />
